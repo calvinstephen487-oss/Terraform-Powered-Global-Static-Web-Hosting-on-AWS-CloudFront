@@ -1,0 +1,60 @@
+# Project: Terraform-Powered Global Static Web Hosting on AWS CloudFront
+
+## Getting Started - Simple Steps
+
+1. **Open the AWS Management Console.**
+
+2. **Create an S3 bucket:**
+   - Navigate to the S3 service.
+   - Click "Create bucket".
+   - Enter a unique bucket name.
+   - Select the AWS region.
+   - Leave other settings as default or customize as needed.
+   - Click "Create bucket".
+
+3. **Configure the bucket for static website hosting:**
+   - Open your bucket’s **Properties** tab.
+   - Enable **Static website hosting**.
+   - Set the **Index document** to `index.html`.
+
+4. **Set a Bucket Policy for public read access:**
+   - Go to **Permissions > Bucket Policy**.
+   - Add a policy to allow public read of objects.
+
+5. **Prepare your local project folder with necessary files:**
+   - `index.html` for website content.
+   - Terraform files (`main.tf`, `variables.tf`, `outputs.tf`).
+
+6. **Edit the Terraform variables:**
+   - Add your bucket name, AWS region, and CloudFront distribution ID.
+
+7. **Initialize Terraform in your project directory:**
+   - terraform init
+   
+8. **View the deployment plan:**
+  - terraform plan
+  
+9. **Apply the Terraform configuration:**
+  - terraform apply
+
+- Type `yes` to confirm.
+
+10. **Open your website via the S3 bucket website endpoint or CloudFront distribution URL.**
+
+11. **When you update `index.html`:**
+ - Run the following to upload changes and invalidate cache automatically:
+ ```
+ terraform apply
+ ```
+
+12. **If updates don’t appear immediately:**
+ - Force resource replacement and cache invalidation with:
+ ```
+ terraform taint aws_s3_object.index_html
+ terraform apply
+ ```
+
+---
+
+This process automates deployment and update of a static globally distributed website on AWS using Terraform.
+
