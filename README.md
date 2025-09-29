@@ -1,5 +1,8 @@
 # Terraform-Powered-Global-Static-Web-Hosting-on-AWS-CloudFront
 
+## Download Terraform
+https://releases.hashicorp.com/terraform/1.6.0/terraform_1.6.0_windows_amd64.zip
+
 ## Project Overview
 This project demonstrates the end-to-end deployment of a static website for **"The Calvin Hotel"**, utilizing AWS cloud infrastructure managed through Terraform as Infrastructure as Code (IaC).
 
