@@ -1,17 +1,18 @@
 variable "bucket_name" {
   type        = string
   description = "S3 bucket name"
-  default     = "calvin-resume-site-2025"
+  default     = "Your Bucket name"
 }
 
 variable "region" {
   type        = string
   description = "AWS region"
-  default     = "us-east-1"
+  default     = "Your region name"
 }
 
 variable "cloudfront_distribution_id" {
   type        = string
   description = "CloudFront distribution ID for invalidation"
-  default     = "E2XYU3XRANH7A6"
+  default     = "Your cloud front id"
 }
+
